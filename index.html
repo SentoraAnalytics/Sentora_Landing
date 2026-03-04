@@ -5,19 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SENTORAN – Premium Customer Sentiment Reports for Service Industry</title>
   <meta name="description" content="SENTORAN provides premium customer sentiment reports for hotels, restaurants, bakeries and pubs. Turn online reviews into actionable insights."/>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container">
-     <div class="logo">
-  	<img src="assets/logo.png" alt="Sentoran logo" height="210" />
-     </div>
+      <div class="logo">
+        <img src="assets/logo.png" alt="Sentoran logo" height="210" />
+      </div>
       <nav class="nav">
         <a href="#how-it-works">How it works</a>
         <a href="#contact" class="btn-primary">Get a demo</a>
@@ -40,7 +45,6 @@
         </div>
       </div>
       <div class="hero-visual">
-        <!-- Placeholder for dashboard / mockup image -->
         <img src="assets/dashboard1.png" alt="SENTORA dashboard preview" />
       </div>
     </div>
@@ -123,19 +127,18 @@
           <a href="#contact" class="btn-primary">Start now</a>
         </div>
 
-	<div class="pricing-card">	
+        <div class="pricing-card">	
           <h3>Single Location - Periodic</h3>
           <p class="price">Custom</p>
           <ul>
             <li>1 full report / month</li>
-	    <li>1 full report / quarter</li>
-	    <li>Benchmarking</li>	
+            <li>1 full report / quarter</li>
+            <li>Benchmarking</li>	
             <li>Sentiment analysis</li>
             <li>Actionable insights</li>
           </ul>
           <a href="#contact" class="btn-primary">Talk to sales</a>
         </div>
-
 
         <div class="pricing-card featured">
           <h3>Multi-Location</h3>
@@ -144,9 +147,8 @@
             <li>Personalized reports for multiple locations</li>
             <li>Benchmarking</li>
             <li>Dedicated analyst</li>
-	    <li>Sentiment analysis</li>
+            <li>Sentiment analysis</li>
             <li>Actionable insights</li>
-
           </ul>
           <a href="#contact" class="btn-primary">Talk to sales</a>
         </div>
@@ -160,9 +162,9 @@
       <h2>Stop guessing what your customers think</h2>
       <p>Get your first SENTORAN report and turn feedback into growth.</p>
       <form class="cta-form" action="https://formspree.io/f/xwvnqzvj" method="POST">
-  	<input type="text" name="business" placeholder="Business name" required />
- 	<input type="email" name="email" placeholder="Email address" required />
-  	<button type="submit" class="btn-primary">Request demo</button>
+        <input type="text" name="business" placeholder="Business name" required />
+        <input type="email" name="email" placeholder="Email address" required />
+        <button type="submit" class="btn-primary">Request demo</button>
       </form>
     </div>
   </section>
@@ -172,8 +174,8 @@
     <div class="container footer-grid">
       <div>
         <div class="logo">
- 	 <img src="assets/logo.png" alt="Sentora logo" height="200" />
-	</div>
+          <img src="assets/logo.png" alt="Sentoran logo" height="200" />
+        </div>
         <p>Premium sentiment intelligence for the service industry.</p>
       </div>
       <div>
@@ -187,19 +189,27 @@
         <h4>Company</h4>
         <ul>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.iubenda.com/privacy-policy/19592451" class="iubenda-embed" title="Privacy Policy">Privacy Policy</a></li>
+          <li><a href="https://www.iubenda.com/privacy-policy/19592451/cookie-policy" class="iubenda-embed" title="Cookie Policy">Cookie Policy</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
+  <!-- Iubenda script (gestisce banner e policy) -->
+  <script type="text/javascript">
+  (function (w,d) {
+    var loader = function () {
+      var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+      s.src="https://cdn.iubenda.com/iubenda.js";
+      tag.parentNode.insertBefore(s,tag);
+    };
+    if(w.addEventListener){w.addEventListener("load", loader, false);}
+    else if(w.attachEvent){w.attachEvent("onload", loader);}
+    else{w.onload = loader;}
+  })(window, document);
+  </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
