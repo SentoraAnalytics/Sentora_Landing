@@ -14,12 +14,13 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Iubenda Privacy & Cookie Policy (metti nello head) -->
+  <!-- Iubenda Privacy & Cookie Policy -->
   <script type="text/javascript">
     (function (w,d) {
       var loader = function () {
         var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
         s.src="https://cdn.iubenda.com/iubenda.js";
+        s.async = true; /* forza caricamento asincrono per GitHub Pages */
         tag.parentNode.insertBefore(s,tag);
       };
       if(w.addEventListener){w.addEventListener("load", loader, false);}
@@ -27,6 +28,15 @@
       else{w.onload = loader;}
     })(window, document);
   </script>
+
+  <!-- CSS per banner sopra altri elementi -->
+  <style>
+    .iubenda-cs-banner {
+      z-index: 9999 !important;
+      position: fixed !important;
+      bottom: 0 !important;
+    }
+  </style>
 
 </head>
 <body>
