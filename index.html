@@ -1,229 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sentoran – Premium Customer Sentiment Reports for Service Industry</title>
-  <meta name="description" content="Sentoran provides premium customer sentiment reports for hotels, restaurants, bakeries and pubs. Turn online reviews into actionable insights."/>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Iubenda Cookie Solution -->
+    <script
+      type="text/javascript"
+      src="https://embeds.iubenda.com/widgets/1d6f07ee-2aac-4762-a5c1-4d500e435f42.js">
+    </script>
 
-  <!-- Iubenda Privacy & Cookie Policy -->
-  <script type="text/javascript">
-    (function (w,d) {
-      var loader = function () {
-        var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-        s.src="https://cdn.iubenda.com/iubenda.js";
-        s.async = true; /* forza caricamento asincrono per GitHub Pages */
-        tag.parentNode.insertBefore(s,tag);
-      };
-      if(w.addEventListener){w.addEventListener("load", loader, false);}
-      else if(w.attachEvent){w.attachEvent("onload", loader);}
-      else{w.onload = loader;}
-    })(window, document);
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- CSS per banner sopra altri elementi -->
-  <style>
-    .iubenda-cs-banner {
-      z-index: 9999 !important;
-      position: fixed !important;
-      bottom: 0 !important;
-    }
-  </style>
+    <title>Sentoran – Premium Customer Sentiment Reports for Service Industry</title>
 
-</head>
-<body>
+    <meta
+      name="description"
+      content="Sentoran provides premium customer sentiment reports for hotels, restaurants, bakeries and pubs. Turn online reviews into actionable insights."
+    />
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Sentoran logo" height="210" />
-      </div>
-      <nav class="nav">
-        <a href="#how-it-works">How it works</a>
-        <a href="#contact" class="btn-primary">Get a demo</a>
-        <a href="/it/">IT</a>
-        <link rel="alternate" hreflang="en" href="/">
-      </nav>
-    </div>
-  </header>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <h1>Turn online sentiment into business growth</h1>
-        <p>
-          Sentoran delivers premium customer-based reports for hotels, restaurants, bakeries, and pubs.
-          Stop guessing. Start acting on real customer feedback.
-        </p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn-primary">Request a demo</a>
-          <a href="#how-it-works" class="btn-secondary">See how it works</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <img src="assets/dashboard1.png" alt="SENTORA dashboard preview" />
-      </div>
-    </div>
-  </section>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- HOW IT WORKS -->
-  <section id="how-it-works" class="how-it-works">
-    <div class="container">
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="step">
-          <h3>1. We collect reviews</h3>
-          <p>We aggregate customer feedback from Google, TripAdvisor, Deliveroo, Uber Eats and more platforms for a complete online sentiment picture.</p>
-        </div>
-        <div class="step">
-          <h3>2. We analyze sentiment</h3>
-          <p>Our proprietary model detects sentiment, spots recurring issues, highlights strengths and helps you bridge competitive gaps.</p>
-        </div>
-        <div class="step">
-          <h3>3. You get actionable reports</h3>
-          <p>We provide clear insights you can act on incl. service quality, food options, pricing, staff training and atmosphere.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <!-- FEATURES -->
-  <section id="features" class="features">
-    <div class="container">
-      <h2>What you get</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Periodic premium reports</h3>
-          <p>Always up to date actionable insights from structured assessments.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Competitor benchmarking</h3>
-          <p>Assess how you perform vs. similar venues in your area.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Advanced issue detection</h3>
-          <p>Spot recurring complaints before they hurt your reputation and act upon it.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Customer praise mapping</h3>
-          <p>Understand what customers love about you and double down on it.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Iubenda script for Privacy / Cookie pages -->
+    <script type="text/javascript">
+      (function (w, d) {
+        var loader = function () {
+          var s = d.createElement("script"),
+              tag = d.getElementsByTagName("script")[0];
+          s.src = "https://cdn.iubenda.com/iubenda.js";
+          tag.parentNode.insertBefore(s, tag);
+        };
 
-  <!-- WHO IT'S FOR -->
-  <section id="who" class="who">
-    <div class="container">
-      <h2>Built for service industry leaders</h2>
-      <div class="who-grid">
-        <div class="who-card">Hotels</div>
-        <div class="who-card">Restaurants</div>
-        <div class="who-card">Bakeries</div>
-        <div class="who-card">Pubs & Bars</div>
-        <div class="who-card">Franchise Owners</div>
-        <div class="who-card">Multi-location groups</div>
-      </div>
-    </div>
-  </section>
+        if (w.addEventListener) {
+          w.addEventListener("load", loader, false);
+        } else if (w.attachEvent) {
+          w.attachEvent("onload", loader);
+        } else {
+          w.onload = loader;
+        }
+      })(window, document);
+    </script>
 
-  <!-- PRICING -->
-  <section id="pricing" class="pricing">
-    <div class="container">
-      <h2>Simple pricing</h2>
-      <div class="pricing-cards">
-        <div class="pricing-card">  
-          <h3>Single Location</h3>
-          <p class="price">€89</p>
-          <ul>
-            <li>1 full report / month</li>
-            <li>Sentiment analysis</li>
-            <li>Actionable insights</li>
-          </ul>
-          <a href="#contact" class="btn-primary">Start now</a>
-        </div>
+  </head>
 
-        <div class="pricing-card">  
-          <h3>Single Location - Periodic</h3>
-          <p class="price">Custom</p>
-          <ul>
-            <li>1 full report / month</li>
-            <li>1 full report / quarter</li>
-            <li>Benchmarking</li>  
-            <li>Sentiment analysis</li>
-            <li>Actionable insights</li>
-          </ul>
-          <a href="#contact" class="btn-primary">Talk to sales</a>
-        </div>
+  <body>
 
-        <div class="pricing-card featured">
-          <h3>Multi-Location</h3>
-          <p class="price">Custom</p>
-          <ul>
-            <li>Personalized reports for multiple locations</li>
-            <li>Benchmarking</li>
-            <li>Dedicated analyst</li>
-            <li>Sentiment analysis</li>
-            <li>Actionable insights</li>
-          </ul>
-          <a href="#contact" class="btn-primary">Talk to sales</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
 
-  <!-- CTA -->
-  <section id="contact" class="cta">
-    <div class="container cta-box">
-      <h2>Stop guessing what your customers think</h2>
-      <p>Get your first Sentoran report and turn feedback into growth.</p>
-      <form class="cta-form" action="https://formspree.io/f/xwvnqzvj" method="POST">
-        <input type="text" name="business" placeholder="Business name" required />
-        <input type="email" name="email" placeholder="Email address" required />
-        <button type="submit" class="btn-primary">Request demo</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
         <div class="logo">
-          <img src="assets/logo.png" alt="Sentoran logo" height="200" />
+          <img src="assets/logo.png" alt="Sentoran logo" height="210" />
         </div>
-        <p>Premium sentiment intelligence for the service industry.</p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://www.iubenda.com/privacy-policy/19592451" class="iubenda-embed" title="Privacy Policy">Privacy Policy</a></li>
-          <li><a href="https://www.iubenda.com/privacy-policy/19592451/cookie-policy" class="iubenda-embed" title="Cookie Policy">Cookie Policy</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
 
-</body>
+        <nav class="nav">
+          <a href="#how-it-works">How it works</a>
+          <a href="#contact" class="btn-primary">Get a demo</a>
+          <a href="/it/">IT</a>
+        </nav>
+
+      </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <h1>Turn online sentiment into business growth</h1>
+
+          <p>
+            Sentoran delivers premium customer-based reports for hotels,
+            restaurants, bakeries, and pubs. Stop guessing. Start acting
+            on real customer feedback.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn-primary">Request a demo</a>
+            <a href="#how-it-works" class="btn-secondary">See how it works</a>
+          </div>
+
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/dashboard1.png" alt="Sentoran dashboard preview" />
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="how-it-works">
+
+      <div class="container">
+
+        <h2>How it works</h2>
+
+        <div class="steps">
+
+          <div class="step">
+            <h3>1. We collect reviews</h3>
+            <p>
+              We aggregate customer feedback from Google, TripAdvisor,
+              Deliveroo, Uber Eats and more platforms for a complete
+              online sentiment picture.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>2. We analyze sentiment</h3>
+            <p>
+              Our proprietary model detects sentiment, spots recurring
+              issues, highlights strengths and helps you bridge
+              competitive gaps.
+            </p>
+          </div>
+
+          <div class="step">
+            <h3>3. You get actionable reports</h3>
+            <p>
+              We provide clear insights you can act on including service
+              quality, food options, pricing, staff training and
+              atmosphere.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section id="features" class="features">
+
+      <div class="container">
+
+        <h2>What you get</h2>
+
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <h3>Periodic premium reports</h3>
+            <p>
+              Always up to date actionable insights from structured
+              assessments.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Competitor benchmarking</h3>
+            <p>
+              Assess how you perform vs. similar venues in your area.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Advanced issue detection</h3>
+            <p>
+              Spot recurring complaints before they hurt your reputation
+              and act upon it.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Customer praise mapping</h3>
+            <p>
+              Understand what customers love about you and double down on it.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHO IT'S FOR -->
+    <section id="who" class="who">
+
+      <div class="container">
+
+        <h2>Built for service industry leaders</h2>
+
+        <div class="who-grid">
+          <div class="who-card">Hotels</div>
+          <div class="who-card">Restaurants</div>
+          <div class="who-card">Bakeries</div>
+          <div class="who-card">Pubs & Bars</div>
+          <div class="who-card">Franchise Owners</div>
+          <div class="who-card">Multi-location groups</div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing">
+
+      <div class="container">
+
+        <h2>Simple pricing</h2>
+
+        <div class="pricing-cards">
+
+          <div class="pricing-card">
+
+            <h3>Single Location</h3>
+            <p class="price">€89</p>
+
+            <ul>
+              <li>1 full report / month</li>
+              <li>Sentiment analysis</li>
+              <li>Actionable insights</li>
+            </ul>
+
+            <a href="#contact" class="btn-primary">Start now</a>
+
+          </div>
+
+
+          <div class="pricing-card">
+
+            <h3>Single Location - Periodic</h3>
+            <p class="price">Custom</p>
+
+            <ul>
+              <li>1 full report / month</li>
+              <li>1 full report / quarter</li>
+              <li>Benchmarking</li>
+              <li>Sentiment analysis</li>
+              <li>Actionable insights</li>
+            </ul>
+
+            <a href="#contact" class="btn-primary">Talk to sales</a>
+
+          </div>
+
+
+          <div class="pricing-card featured">
+
+            <h3>Multi-Location</h3>
+            <p class="price">Custom</p>
+
+            <ul>
+              <li>Personalized reports for multiple locations</li>
+              <li>Benchmarking</li>
+              <li>Dedicated analyst</li>
+              <li>Sentiment analysis</li>
+              <li>Actionable insights</li>
+            </ul>
+
+            <a href="#contact" class="btn-primary">Talk to sales</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section id="contact" class="cta">
+
+      <div class="container cta-box">
+
+        <h2>Stop guessing what your customers think</h2>
+
+        <p>
+          Get your first Sentoran report and turn feedback into growth.
+        </p>
+
+        <form
+          class="cta-form"
+          action="https://formspree.io/f/xwvnqzvj"
+          method="POST"
+        >
+
+          <input
+            type="text"
+            name="business"
+            placeholder="Business name"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            required
+          />
+
+          <button type="submit" class="btn-primary">
+            Request demo
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <div class="container footer-grid">
+
+        <div>
+
+          <div class="logo">
+            <img src="assets/logo.png" alt="Sentoran logo" height="200" />
+          </div>
+
+          <p>
+            Premium sentiment intelligence for the service industry.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Product</h4>
+
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Company</h4>
+
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <li>
+              <a
+                href="https://www.iubenda.com/privacy-policy/19592451"
+                class="iubenda-embed"
+                title="Privacy Policy"
+              >
+                Privacy Policy
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.iubenda.com/privacy-policy/19592451/cookie-policy"
+                class="iubenda-embed"
+                title="Cookie Policy"
+              >
+                Cookie Policy
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </body>
+
 </html>
-
-
