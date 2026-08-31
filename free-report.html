@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get Your Free Restaurant Report | Sentoran</title>
+    <meta
+        name="description"
+        content="Get a free Sentoran report analysing your restaurant's customer reviews."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #02050b;
+            --bg-soft: #07101c;
+            --blue: #1683ff;
+            --blue-light: #39a5ff;
+            --white: #f5f7fa;
+            --muted: #929aa8;
+            --border: rgba(255, 255, 255, 0.12);
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(17, 91, 170, 0.16),
+                    transparent 38%
+                ),
+                var(--bg);
+            color: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+            padding: 28px 22px 36px;
+        }
+
+        /* Logo */
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 62px;
+        }
+
+        .logo img {
+            width: 118px;
+            height: auto;
+        }
+
+        /* Hero */
+
+        .hero {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin-bottom: 18px;
+        }
+
+        .eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--blue);
+            box-shadow: 0 0 10px rgba(22, 131, 255, 0.8);
+        }
+
+        h1 {
+            font-size: clamp(32px, 9vw, 46px);
+            line-height: 1.06;
+            letter-spacing: -0.045em;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        h1 span {
+            color: var(--blue-light);
+        }
+
+        .intro {
+            max-width: 430px;
+            margin: 0 auto;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Form */
+
+        .form-card {
+            background: rgba(7, 16, 28, 0.72);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 22px;
+            backdrop-filter: blur(14px);
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: #dce1e8;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            height: 54px;
+            border: 1px solid rgba(255, 255, 255, 0.13);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.045);
+            color: var(--white);
+            padding: 0 15px;
+            font-family: inherit;
+            font-size: 16px;
+            outline: none;
+            transition:
+                border-color 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        input::placeholder {
+            color: #626b79;
+        }
+
+        input:focus {
+            border-color: rgba(22, 131, 255, 0.75);
+            background: rgba(22, 131, 255, 0.045);
+            box-shadow: 0 0 0 3px rgba(22, 131, 255, 0.10);
+        }
+
+        .submit-button {
+            width: 100%;
+            height: 56px;
+            border: 0;
+            border-radius: 13px;
+            margin-top: 6px;
+            background: var(--blue);
+            color: white;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition:
+                transform 0.15s ease,
+                background 0.15s ease,
+                box-shadow 0.15s ease;
+            box-shadow: 0 10px 30px rgba(22, 131, 255, 0.22);
+        }
+
+        .submit-button:hover {
+            background: #2490ff;
+            transform: translateY(-1px);
+            box-shadow: 0 14px 34px rgba(22, 131, 255, 0.28);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .privacy {
+            text-align: center;
+            margin-top: 16px;
+            color: #68717f;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        /* Success state */
+
+        .success {
+            display: none;
+            text-align: center;
+            padding: 24px 8px 10px;
+        }
+
+        .success-icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(22, 131, 255, 0.12);
+            border: 1px solid rgba(22, 131, 255, 0.3);
+            color: var(--blue-light);
+            font-size: 25px;
+        }
+
+        .success h2 {
+            font-size: 28px;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .success p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #4e5662;
+            font-size: 11px;
+        }
+
+        @media (max-width: 380px) {
+            .container {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .logo {
+                margin-bottom: 48px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .form-card {
+                padding: 18px;
+                border-radius: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+    <main class="container">
+
+        <div class="logo">
+            <!-- Replace with your actual Sentoran logo path if needed -->
+            <img src="assets/logo.png" alt="Sentoran">
+        </div>
+
+        <section class="hero">
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Free restaurant report
+            </div>
+
+            <h1>
+                Understand what your customers are <span>really saying.</span>
+            </h1>
+
+            <p class="intro">
+                We'll analyse your restaurant's online reviews and send you
+                a free Sentoran report with the key patterns, strengths and
+                areas for improvement.
+            </p>
+        </section>
+
+        <div class="form-card">
+
+            <form
+                id="report-form"
+                action="https://formspree.io/f/xaeyqevl"
+                method="POST"
+            >
+
+                <div class="field">
+                    <label for="name">Your name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="John Smith"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="email">Email address</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="john@restaurant.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="restaurant">Restaurant name</label>
+                    <input
+                        id="restaurant"
+                        name="restaurant"
+                        type="text"
+                        placeholder="Your restaurant"
+                        autocomplete="organization"
+                        required
+                    >
+                </div>
+
+                <button
+                    class="submit-button"
+                    type="submit"
+                    id="submit-button"
+                >
+                    Get my free report →
+                </button>
+
+                <p class="privacy">
+                    No commitment. We'll only use your details to contact you
+                    about your report.
+                </p>
+
+            </form>
+
+            <div class="success" id="success-message">
+                <div class="success-icon">✓</div>
+
+                <h2>Thank you!</h2>
+
+                <p>
+                    <strong>We'll send your free report soon.</strong>
+                    <br>
+                    Keep an eye on your inbox.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            SENTORAN · Restaurant Review Analytics
+        </div>
+
+    </main>
+</div>
+
+<script>
+    const form = document.getElementById("report-form");
+    const button = document.getElementById("submit-button");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            if (response.ok) {
+                form.style.display = "none";
+                successMessage.style.display = "block";
+            } else {
+                button.disabled = false;
+                button.textContent = "Get my free report →";
+                alert("Something went wrong. Please try again.");
+            }
+
+        } catch (error) {
+            button.disabled = false;
+            button.textContent = "Get my free report →";
+            alert("Something went wrong. Please try again.");
+        }
+    });
+</script>
+
+</body>
+</html>
